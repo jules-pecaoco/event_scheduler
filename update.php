@@ -36,7 +36,6 @@ function updateEvent($index, $newName, $newDetails, $newDateTime) {
 
         // Check if the index is valid
         if (isset($lines[$startLine]) && isset($lines[$startLine + 1]) && isset($lines[$startLine + 2])) {
-            // Update the event data
             $lines[$startLine] = "Event Name: " . $newName;
             $lines[$startLine + 1] = "Details: " . $newDetails;
             $lines[$startLine + 2] = "Date and Time: " . $newDateTime;

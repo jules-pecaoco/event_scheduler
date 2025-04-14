@@ -8,7 +8,6 @@ $currentTab = isset($_GET['tab']) ? $_GET['tab'] : 'home';
 // Define allowed tabs to prevent unauthorized file inclusions
 $allowedTabs = ['home', 'add', 'update', 'delete'];
 
-// Validate the tab parameter
 if (!in_array($currentTab, $allowedTabs)) {
   $currentTab = 'home';
 }
@@ -60,7 +59,6 @@ if (!in_array($currentTab, $allowedTabs)) {
         </h2>
 
         <?php
-        // Include the correct file based on the current tab
         include $currentTab . '.php';
         ?>
       </div>
